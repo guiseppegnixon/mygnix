@@ -16,6 +16,18 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-42160eb2-606c-4728-8a73-e8e539ac5d50".device = "/dev/disk/by-uuid/42160eb2-606c-4728-8a73-e8e539ac5d50";
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+      };
+    };
+  };
+
+
   networking.hostName = "nixheim"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
