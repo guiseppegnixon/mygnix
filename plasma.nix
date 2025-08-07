@@ -276,8 +276,8 @@
       "kdeglobals"."WM"."inactiveBackground" = "47,52,63";
       "kdeglobals"."WM"."inactiveBlend" = "47,52,63";
       "kdeglobals"."WM"."inactiveForeground" = "102,106,115";
-      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."Image" = "/home/guiseppe/.local/share/wallpapers/nordic-wallpaper.jpg";
-      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."PreviewImage" = "/home/guiseppe/.local/share/wallpapers/nordic-wallpaper.jpg";
+#      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."Image" = "/home/guiseppe/.local/share/wallpapers/nordic-wallpaper.jpg";
+#      "kscreenlockerrc"."Greeter/Wallpaper/org.kde.image/General"."PreviewImage" = "/home/guiseppe/.local/share/wallpapers/nordic-wallpaper.jpg";
       "ksplashrc"."KSplash"."Theme" = "Colourful-Ring-Splashscreen-Plasma6";
       "kwalletrc"."Wallet"."First Use" = false;
       "kwinrc"."Activities/LastVirtualDesktop"."bd5eba7b-714e-481a-801c-e896378340cd" = "d72dd2a2-a7fd-4717-946e-78f441ac0e09";
@@ -293,7 +293,7 @@
       "kwinrc"."org.kde.kdecoration2"."theme" = "__aurorae__svg__Nordic";
       "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
       "plasmarc"."Theme"."name" = "Nordic";
-      "plasmarc"."Wallpapers"."usersWallpapers" = "/home/guiseppe/Pictures/wp10254425-dune-2021-wallpapers.jpg";
+#      "plasmarc"."Wallpapers"."usersWallpapers" = "/home/guiseppe/Pictures/wp10254425-dune-2021-wallpapers.jpg";
     dataFile = {
 
   };
