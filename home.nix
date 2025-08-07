@@ -6,16 +6,7 @@
 
   home.packages = [
     pkgs.ghostty
-    #pkgs.vim
-#    pkgs.neovim
   ];
-
-#  imports = [
-#    inputs.nix4nvchad.homeManagerModule
-#  ];
-#  programs.nvchad.enable = true;
-#  programs.nvchad.hm-activation = true;
-#  programs.nvchad.backup = false;
 
   programs.ghostty = {
     enable = true;
@@ -26,18 +17,6 @@
       background-blur = true;
     };
   };
-
-#  programs.nvf.enable = true;
-
-#  programs.vim = {
-#    enable = true;
-#    plugins = with pkgs.vimPlugins; [ nvchad ];
-#  };
-#  imports = [
-#    inputs.nix4nvchad.homeManagerModule
-#  ];
-
-#  programs.nvchad.enable = true;
 
   home.stateVersion = "25.05";
 

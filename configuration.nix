@@ -36,6 +36,8 @@
 
   nix.settings = { download-buffer-size = 524288000; };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   virtualisation.docker = {
     enable = true;
     daemon.settings = {
@@ -112,13 +114,9 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "guiseppe";
 
-  # Install firefox.
-#  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -128,7 +126,6 @@
     curl
     git
     
-#    neovim
     ghostty    
 
     zsh
@@ -233,23 +230,6 @@
       };
     };
   };
-
-#  programs.nvf = {
-#    enable = true;
-#    vim.viAlias = true;
-#    vim.vimAlias = true;
-#    vim.lsp.enable = true;
-#
-#  };
-  
-#  programs.nvchad.enable = true;
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 
