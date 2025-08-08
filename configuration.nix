@@ -37,14 +37,14 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.firewall = {
-    enable = true;
-    extraCommands = 
-    '' 
-       iptables -A DOCKER-USER -m physdev 
-       iptables -A DOCKER-USER -i br-+ -o br-+ -j DROP 
-    '';
-  };
+#  networking.firewall = {
+#    enable = true;
+#    extraCommands = 
+#    '' 
+#       iptables -A DOCKER-USER -m physdev 
+#       iptables -A DOCKER-USER -i br-+ -o br-+ -j DROP 
+#    '';
+#  };
 
   nix.settings = { download-buffer-size = 524288000; };
 
