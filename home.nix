@@ -19,7 +19,7 @@
     };
   };
 
-  programs.flameshot = {
+  services.flameshot = {
     enable = true;
     settings = {
       startupLaunch = true;
