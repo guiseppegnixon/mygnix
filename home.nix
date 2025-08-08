@@ -21,9 +21,9 @@
 
   services.flameshot = {
     enable = true;
-    settings = {
-      startupLaunch = true;
-    };
+#    settings = {
+#      startupLaunch = true;
+#    };
   };
 
   home.stateVersion = "25.05";
