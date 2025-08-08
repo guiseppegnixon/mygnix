@@ -6,6 +6,7 @@
 
   home.packages = [
     pkgs.ghostty
+    pkgs.flameshot
   ];
 
   programs.ghostty = {
@@ -15,6 +16,13 @@
       font-family = "Liberation Mono";
       background-opacity = 0.5;
       background-blur = true;
+    };
+  };
+
+  programs.flameshot = {
+    enable = true;
+    settings = {
+      startupLaunch = true;
     };
   };
 

@@ -15,7 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-42160eb2-606c-4728-8a73-e8e539ac5d50".device = "/dev/disk/by-uuid/42160eb2-606c-4728-8a73-e8e539ac5d50";
+  boot.initrd.luks.devices."luks-527734d0-c5c8-465c-9ce5-2a09fe625229".device = "/dev/disk/by-uuid/527734d0-c5c8-465c-9ce5-2a09fe625229";
 
   hardware.bluetooth = {
     enable = true;
@@ -147,7 +147,10 @@
     ripgrep
     anew
     btop
-    neofetch
+    
+    tree
+    fastfetch
+    flameshot
 
     yt-dlp
 
