@@ -6,7 +6,6 @@
 
   home.packages = [
     pkgs.ghostty
-    pkgs.flameshot
   ];
 
   programs.ghostty = {
@@ -17,13 +16,6 @@
       background-opacity = 0.5;
       background-blur = true;
     };
-  };
-
-  services.flameshot = {
-    enable = true;
-#    settings = {
-#      startupLaunch = true;
-#    };
   };
 
   home.stateVersion = "25.05";
