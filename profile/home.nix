@@ -3,6 +3,8 @@
 {
   imports = [
         ./config/alacritty.nix
+        ./config/btop.nix
+        ./config/flameshot.nix
         ./config/git.nix
                 #        ./config/plasma.nix
   ];

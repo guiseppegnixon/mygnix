@@ -55,6 +55,7 @@ environment.systemPackages = with pkgs; [
     typescript
 
     kdePackages.filelight
+    kdePackages.plasma-workspace-wallpapers
     kdePackages.partitionmanager
     kdePackages.isoimagewriter
 
