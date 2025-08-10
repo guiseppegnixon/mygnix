@@ -1,8 +1,12 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, flakeSettings, ... }:
 
 {
-  home.username = "guiseppe";
-  home.homeDirectory = "/home/guiseppe";
+  imports = [
+    ./config/git.nix
+  ];
+
+  home.username = flakeSettings.username;
+  home.homeDirectory = ( "/home" + ("/" + flakeSettings.username));
 
   home.packages = [
     pkgs.ghostty
@@ -17,6 +21,7 @@
       background-blur = true;
     };
   };
+
 
   home.stateVersion = "25.05";
 

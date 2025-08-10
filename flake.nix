@@ -7,20 +7,42 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
-
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.nixheim = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.guiseppe = import ./home.nix;
-        }
-      ];
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, ... }:
+    let 
+      flakeSettings = {
+        username = "guiseppe";
+        hostname = "nixheim";
+        system = "x86_64-linux";
+	email = "guiseppegnixon@gmail.com";
+      };
+    
+    in { 
+      nixosConfigurations.nixheim = nixpkgs.lib.nixosSystem {
+	specialArgs = { inherit flakeSettings; };
+        modules = [
+          ./profile/configuration.nix
+          nvf.nixosModules.default
+          home-manager.nixosModules.home-manager
+          {
+	    home-manager.backupFileExtension = "hm-backup";
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+	    home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+            home-manager.users.${flakeSettings.username} = import ./profile/home.nix;
+	    home-manager.extraSpecialArgs = { inherit flakeSettings; };
+          }
+        ];
+      };
+    };
 }

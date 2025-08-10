@@ -1,4 +1,9 @@
+{ config, pkgs, flakeSettings, ...}:
+
 {
+
+  imports = [ <plasma-manager/modules> ];
+
   programs.plasma = {
     enable = true;
     shortcuts = {
@@ -294,7 +299,6 @@
       "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
       "plasmarc"."Theme"."name" = "Nordic";
 #      "plasmarc"."Wallpapers"."usersWallpapers" = "/home/guiseppe/Pictures/wp10254425-dune-2021-wallpapers.jpg";
-    dataFile = {
-
+    };
   };
 }
