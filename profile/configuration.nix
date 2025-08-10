@@ -2,8 +2,6 @@
 
 {
   imports = [
-#      ./config/brave.nix
-      ./config/git.nix
       ./config/nvim.nix
 #      ./config/plasma.nix
       ./config/program-settings.nix
@@ -14,7 +12,6 @@
       ./system/pkgs.nix
       ./system/system.nix
       ./system/users.nix
-#      ./system/virtualization.nix
     ];
 
   # This value determines the NixOS release from which the default

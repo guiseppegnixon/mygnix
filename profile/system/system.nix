@@ -5,8 +5,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-527734d0-c5c8-465c-9ce5-2a09fe625229".device = "/dev/disk/by-uuid/5277
-34d0-c5c8-465c-9ce5-2a09fe625229";
+  boot.initrd.luks.devices."luks-527734d0-c5c8-465c-9ce5-2a09fe625229".device = "/dev/disk/by-uuid/527734d0-c5c8-465c-9ce5-2a09fe625229";
 
   # Hardware
   hardware.bluetooth = {
