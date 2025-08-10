@@ -9,6 +9,7 @@ environment.systemPackages = with pkgs; [
     git
 
     ghostty
+    alacritty
 
     zsh
     starship
@@ -51,6 +52,7 @@ environment.systemPackages = with pkgs; [
     rustup
     python314
     go
+    typescript
 
     kdePackages.filelight
     kdePackages.partitionmanager

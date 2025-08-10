@@ -2,7 +2,9 @@
 
 {
   imports = [
-    ./config/git.nix
+        ./config/alacritty.nix
+        ./config/git.nix
+        #./config/plasma.nix
   ];
 
   home.username = flakeSettings.username;

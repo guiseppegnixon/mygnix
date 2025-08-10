@@ -25,17 +25,17 @@
       format = "(0x9A348E)$username(fg:0x9A348E bg:0xDA627D)$directory$line_break$character";
       character = {
         format = "$symbol ";
-        vicmd_symbol = "[<U+F105>](bold green)";
+        vicmd_symbol = "[](bold green)";
         disabled = false;
-        success_symbol = "[<U+F105>](bold green) ";
-        error_symbol = "[✗](bold red) ";
+        success_symbol = "[](bold green) ";
+        error_symbol = "[](bold red) ";
       };
 
       directory = {
         disabled = false;
         format = "[$path]($style)[$read_only]($read_only_style) ";
         home_symbol = "~";
-        read_only = " <U+F83D>";
+        read_only = "";
         read_only_style = "red";
         repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$r
 ead_only]($read_only_style) ";
