@@ -10,7 +10,7 @@
                                 blur = true;
                                 title = flakeSettings.hostname;
                         };    
-                        theme = "nord";
+                theme = "nord";
                 };
         };
 

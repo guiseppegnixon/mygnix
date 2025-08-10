@@ -44,14 +44,14 @@
         statusline = {
           lualine = {
             enable = true;
-            theme = "solarized_dark";
+            theme = "nord";
           };
         };
 
         theme = {
           enable = true;
-          name = "solarized_dark";
-          style = "cool";
+          name = "nord";
+          #style = "dark";
           transparent = true;
         };
 
