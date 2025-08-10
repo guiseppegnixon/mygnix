@@ -1,16 +1,19 @@
-{ config, pkgs, inputs, flakeSettings, ... }:
+{ config, pkgs, inputs, lib, flakeSettings, ... }:
 
 {
   imports = [
       ./config/fonts.nix
-      ./config/nvim.nix
-#      ./config/plasma.nix
+      ./config/nvf.nix
       ./config/program-settings.nix
       ./config/stevenblack-hosts.nix
+      ./system/autoupdate.nix
       ./system/docker.nix
+      ./system/hardening.nix
       ./system/hardware-configuration.nix
+      ./system/laptop.nix
       ./system/network.nix
       ./system/pkgs.nix
+      ./system/schedulers.nix
       ./system/system.nix
       ./system/users.nix
     ];

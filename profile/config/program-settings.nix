@@ -19,6 +19,7 @@
       cat = "bat";
       grep = "rg";
       nv = "nvim";
+      nf = "cd ~/.nixfiles";
     };
   };
 
