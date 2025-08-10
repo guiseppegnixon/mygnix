@@ -74,7 +74,7 @@ environment.systemPackages = with pkgs; [
     smap
     nuclei
     katana
-    urx
+    gau
     subfinder
     asnmap
     xnlinkfinder
