@@ -67,6 +67,19 @@ environment.systemPackages = with pkgs; [
     bottles
     virtualbox
 
+    caido
+    nmap
+    sqlmap
+    feroxbuster
+    smap
+    nuclei
+    katana
+    urx
+    subfinder
+    asnmap
+    xnlinkfinder
+    cewler
+
   ];
 
 }
