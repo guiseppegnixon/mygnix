@@ -4,7 +4,7 @@
 
         programs.alacritty = {
                 enable = true;
-                shell.program = ${zsh}/bin/zsh;
+#                shell.program = ${zsh}/bin/zsh;
                 settings = {
                         window = {
                                 opacity = 0.5;

@@ -6,6 +6,10 @@
 
   programs.zsh = {
     enable = true;
+    shellInit = ''
+                        zsh-newuser-install() {:;}
+                '';
+
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
