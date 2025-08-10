@@ -6,7 +6,7 @@
         ./config/btop.nix
         ./config/flameshot.nix
         ./config/git.nix
-                #        ./config/plasma.nix
+        ./config/plasma.nix
   ];
 
   home.username = flakeSettings.username;
