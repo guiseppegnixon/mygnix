@@ -16,7 +16,7 @@
     enable = true;
     installBatSyntax = true;
     settings = {
-      font-family = "Liberation Mono";
+#      font-family = "Liberation Mono";
       background-opacity = 0.5;
       background-blur = true;
     };

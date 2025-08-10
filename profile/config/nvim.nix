@@ -32,7 +32,6 @@
           };
           html = {
             enable = true;
-#            format.type = "biome";
           };
           css = {
             enable = true;
@@ -71,7 +70,7 @@
             setupOpts.ring.storage = "sqlite";
           };
           undotree.enable = true;
-          icon-picker.enable = true;
+#          icon-picker.enable = true;
         };
 
 	gestures = {

@@ -2,6 +2,7 @@
 
 {
   imports = [
+      ./config/fonts.nix
       ./config/nvim.nix
 #      ./config/plasma.nix
       ./config/program-settings.nix
