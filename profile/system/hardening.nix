@@ -23,6 +23,7 @@
 
   nix.settings.allowed-users = [ "@users" ];
 
+  security.lockKernelModules = true;
   security.protectKernelImage = true;
 
   #security.allowSimultaneousMultithreading = false;

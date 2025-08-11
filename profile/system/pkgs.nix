@@ -81,6 +81,8 @@ environment.systemPackages = with pkgs; [
     xnlinkfinder
     cewler
 
+    lynis
+
   ];
 
 }
