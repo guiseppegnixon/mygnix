@@ -1,9 +1,7 @@
-{ config, inputs, ... }:
+{ config, inputs, lib, ... }:
 
 {
-  import = [
-                ./systemd-services/*.nix
-        ];
+  imports = (lib.filesystem.importModules ./systemd-services { }).modules;
 
   #randomize MAC
   networking.networkmanager = {
