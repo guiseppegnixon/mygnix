@@ -50,6 +50,10 @@
   ];
 
   boot.blacklistedKernelModules = [
+    "dccp"
+    "sctp"
+    "rds"
+    "tipc"
     # Obscure network protocols
     "ax25"
     "netrom"
@@ -79,6 +83,14 @@
     "ufs"
   ];
 
+  boot.kernel.sysctl = {
+    "fs.protected_fifos" = 2;
+    "fs.protected_regular" = 2;
+    "fs.suid_dumpable" = false;
+    "kernel.sysrq" = false;
+    "kernel.unprivileged_bpf_disabled" = true;
+    "net.core.bpf_jit_harden" = 2;
+};
   # Hide kptrs even for processes with CAP_SYSLOG
   boot.kernel.sysctl."kernel.kptr_restrict" = 2;
 
@@ -109,4 +121,44 @@
   boot.kernel.sysctl."net.ipv4.conf.all.send_redirects" = false;
   boot.kernel.sysctl."net.ipv4.conf.default.send_redirects" = false;
 
+  fileSystems."/proc" = {
+    device = "proc";
+    fsType = "proc";
+    options = ["defaults" "hidepid=2"];
+    # unclear if this is actually needed
+    neededForBoot = true;
+  };
+
+  services.dbus.implementation = "broker";
+  security.sudo.execWheelOnly = true;
+
+  systemd.services.systemd-rfkill = {
+    serviceConfig = {
+      ProtectSystem = "strict";
+      ProtectHome = true;
+      ProtectKernelTunables = true;
+      ProtectKernelModules = true;
+      ProtectControlGroups = true;
+      ProtectClock = true;
+      ProtectProc = "invisible";
+      ProcSubset = "pid";
+      PrivateTmp = true;
+      MemoryDenyWriteExecute = true;
+      NoNewPrivileges = true;
+      LockPersonality = true;
+      RestrictRealtime = true;
+      SystemCallArchitectures = "native";
+      UMask = "0077";
+      IPAddressDeny = "any";
+    };
+  };
+
+  systemd.services.systemd-journald = {
+    serviceConfig = {
+      UMask = 0077;
+      PrivateNetwork = true;
+      ProtectHostname = true;
+      ProtectKernelModules = true;
+    };
+  };
 }
