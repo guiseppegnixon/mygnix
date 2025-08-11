@@ -8,7 +8,7 @@
       ./config/stevenblack-hosts.nix
       ./system/autoupdate.nix
       ./system/docker.nix
-      ./system/hardening.nix
+      ./system/hardening/hardening.nix
       ./system/hardware-configuration.nix
       ./system/laptop.nix
       ./system/network.nix

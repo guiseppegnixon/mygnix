@@ -1,6 +1,10 @@
 { config, inputs, ... }:
 
 {
+  import = [
+                ./systemd/*.nix
+        ];
+
   #randomize MAC
   networking.networkmanager = {
     ethernet.macAddress = "stable";
