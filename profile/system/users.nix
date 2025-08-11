@@ -6,7 +6,7 @@
   users.users.${flakeSettings.username} = {
     isNormalUser = true;
     description = flakeSettings.username;
-    extraGroups = [ "docker" "networkmanager" "wheel" ];
+    extraGroups = [ "docker" "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird

@@ -26,6 +26,12 @@
     };
   };
 
+  dconf.settings = {
+                "org/virt-manager/virt-manager/connections" = {
+                        autoconnect = ["qemu:///system"];
+                        urls = ["qwmu:///system"];
+                };
+        };
 
   home.stateVersion = "25.05";
 

@@ -67,7 +67,8 @@ environment.systemPackages = with pkgs; [
     psst
 
     bottles
-    virtualbox
+#    virtualbox
+    virt-manager
 
     caido
 
