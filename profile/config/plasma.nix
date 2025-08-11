@@ -6,7 +6,6 @@
                 kwin.virtualDesktops.number = 4;
                 workspace = {
                         lookAndFeel = "Nordic-bluish";
-                        iconTheme = "Breeze-Dark";
                 };
                 panels = [
                         {
