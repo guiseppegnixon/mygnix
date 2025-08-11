@@ -2,7 +2,7 @@
 
 {
   import = [
-                ./systemd/*.nix
+                ./systemd-services/*.nix
         ];
 
   #randomize MAC
