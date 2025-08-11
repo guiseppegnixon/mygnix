@@ -34,6 +34,7 @@ environment.systemPackages = with pkgs; [
     mullvad-browser
     calibre
     obsidian
+    pandoc
 
     keepassxc
     veracrypt

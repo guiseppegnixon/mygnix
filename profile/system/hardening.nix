@@ -50,10 +50,12 @@
   ];
 
   boot.blacklistedKernelModules = [
+
     "dccp"
     "sctp"
     "rds"
     "tipc"
+
     # Obscure network protocols
     "ax25"
     "netrom"
