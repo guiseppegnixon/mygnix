@@ -70,16 +70,21 @@ environment.systemPackages = with pkgs; [
     virtualbox
 
     caido
+
     nmap
-    sqlmap
-    feroxbuster
     smap
-    nuclei
-    katana
-    gau
+
     subfinder
     asnmap
+    gungnir
+
+    nuclei
+    katana
+    feroxbuster
+    sqlmap
+    gau
     xnlinkfinder
+
     cewler
 
     lynis
