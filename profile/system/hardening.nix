@@ -22,6 +22,7 @@
 # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/profiles/hardened.nix 
 
   nix.settings.allowed-users = [ "@users" ];
+        #  users.mutableUsers = false; # only allow declartively initiated users
 
   security.lockKernelModules = true;
   security.protectKernelImage = true;
