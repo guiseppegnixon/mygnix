@@ -20,9 +20,13 @@
       url = "https://big.oisd.nl/domainswild";
       flake = false;
     };
+    nixos-p2pool-module = {
+      url = "github:jacoMalan1/nixos-p2pool-module";
+      inputs.nixpkgs.follows = "nixpkgs";          
+      };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, nixos-p2pool-module, ... }:
     let 
       flakeSettings = {
         username = "guiseppe";
