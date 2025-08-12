@@ -27,6 +27,7 @@
   users.groups.libvirtd.members = ["${flakeSettings.username}"];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+  services.mullvad-vpn.enable = true;
 
   programs.starship = {
     enable = true;

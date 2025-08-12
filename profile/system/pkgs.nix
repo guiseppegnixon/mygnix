@@ -41,7 +41,7 @@ environment.systemPackages = with pkgs; [
     borgbackup
 
     privoxy
-    mullvad
+    mullvad-vpn
     qbittorrent-enhanced
 
     localsend
