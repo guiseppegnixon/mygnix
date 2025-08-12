@@ -18,6 +18,24 @@
     },
     "flake-parts": {
       "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1754091436,
+        "narHash": "sha256-XKqDMN1/Qj1DKivQvscI4vmHfDfvYR2pfuFOJiCeewM=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "67df8c627c2c39c41dbec76a1f201929929ab0bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
+      "inputs": {
         "nixpkgs-lib": [
           "nvf",
           "nixpkgs"
@@ -73,6 +91,27 @@
         "type": "github"
       }
     },
+    "nixos-p2pool-module": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754159902,
+        "narHash": "sha256-hQsWnl7V9YX10mOIdDPsjKbJDdfLIqGm+NotxST0z7o=",
+        "owner": "jacoMalan1",
+        "repo": "nixos-p2pool-module",
+        "rev": "ee03a46068fd4a2f91bfec67bfeeb8b2a3974715",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jacoMalan1",
+        "repo": "nixos-p2pool-module",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1754937576,
@@ -89,10 +128,25 @@
         "type": "github"
       }
     },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1753579242,
+        "narHash": "sha256-zvaMGVn14/Zz8hnp4VWT9xVnhc8vuL3TStRqwk22biA=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "0f36c44e01a6129be94e3ade315a5883f0228a6e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
     "nvf": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-parts": "flake-parts",
+        "flake-parts": "flake-parts_2",
         "mnw": "mnw",
         "nixpkgs": [
           "nixpkgs"
@@ -116,7 +170,7 @@
     "oisd": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-Do9RvKd/cE/7qVpyRcPoXMFGB0JYU+5QPxc3/PXC8Ug=",
+        "narHash": "sha256-LaeODRb1nmYftApkI42isScV4bWCJhieasZ81uA+k6Y=",
         "type": "file",
         "url": "https://big.oisd.nl/domainswild"
       },
@@ -151,6 +205,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nixos-p2pool-module": "nixos-p2pool-module",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "oisd": "oisd",
