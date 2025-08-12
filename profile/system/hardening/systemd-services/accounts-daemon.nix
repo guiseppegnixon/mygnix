@@ -1,3 +1,5 @@
+{ lib, ... }:
+
 {
   systemd.services.accounts-daemon.serviceConfig = {
     NoNewPrivileges = true;
@@ -7,7 +9,7 @@
     ProtectHostname = true;
     ProtectKernelLogs = true;
     ProtectClock = true;
-    PrivateTmp = true;
+    PrivateTmp = lib.mkForce true;
     RestrictSUIDSGID = true;
     SystemCallFilter = [
       "~@swap"

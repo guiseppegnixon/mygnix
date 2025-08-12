@@ -33,7 +33,7 @@
     
     in { 
       nixosConfigurations.nixheim = nixpkgs.lib.nixosSystem {
-	specialArgs = { inherit flakeSettings; };
+	specialArgs = { inherit inputs flakeSettings; };
         modules = [
           ./profile/configuration.nix
           nvf.nixosModules.default
