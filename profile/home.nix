@@ -7,7 +7,10 @@
         ./config/flameshot.nix
         ./config/git.nix
         ./config/plasma.nix
+        ./config/gpg-agent.nix
   ];
+
+  custom.pgp.enable = true;
 
   home.username = flakeSettings.username;
   home.homeDirectory = ( "/home" + ("/" + flakeSettings.username));

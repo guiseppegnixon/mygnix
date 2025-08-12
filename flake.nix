@@ -16,9 +16,13 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    oisd = {
+      url = "https://big.oisd.nl/domainswild";
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, ... }:
     let 
       flakeSettings = {
         username = "guiseppe";
