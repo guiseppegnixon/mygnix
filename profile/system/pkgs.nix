@@ -94,6 +94,8 @@ environment.systemPackages = with pkgs; [
     aide
     kernel-hardening-checker
 
+    sbctl
+
     monero-cli
     monero-gui
     p2pool

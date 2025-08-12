@@ -1,4 +1,4 @@
-{ config, pkgs, lib }:
+{ config, inputs, pkgs, lib }:
 
 {
         services.monero = {
@@ -6,7 +6,11 @@
                 prune = true;
         };
 
-
+        services.p2pool = {
+                enable = true;
+                mini = true;
+                walletAddress = "CHANGEME";
+        };
 
 
 # XMRIG CONFIG
@@ -26,21 +30,21 @@
                   pools = {
                   # algo = "null";
                   # coin = "null";
-                  url = "pool.supportxmr.com:443";
-                  user = "455dygYZmT4Y3wgnqQc8qgXGcCW9vJevKcpKageR65dBYr5bndKP5GjFCvCownGN8dHVq9k12etDbNjvnTGXGhQ2EA6d8A6";
-                  pass = "crazymonkey";
-          # rig-id = "null";
-          # nicehash = false;
+                  url = "127.0.0.1:3333";
+                  #user = "455dygYZmT4Y3wgnqQc8qgXGcCW9vJevKcpKageR65dBYr5bndKP5GjFCvCownGN8dHVq9k12etDbNjvnTGXGhQ2EA6d8A6";
+                  #pass = "";
+                  # rig-id = "null";
+                  # nicehash = false;
                   keepalive = true;
-          # enabled = true;
+                  enabled = true;
                   tls = true;
-          # tls-fingerprint = "null";
-          # daemon = false;
-          # socks5 = "null";
-          # self-select = null;
-          # submit-to-origin = false;
-        }; 
-      };
+                  # tls-fingerprint = "null";
+                  daemon = true;
+                  # socks5 = "null";
+                  # self-select = null;
+                  # submit-to-origin = false;
+                  }; 
+          };
           in {
                 ExecStartPre = "${pkgs.xmrig}/bin/xmrig --config=${configFile} --dry-run";
                 ExecStart = "${pkgs.xmrig}/bin/xmrig --config=${configFile}";
@@ -49,6 +53,6 @@
       # privileges (Windows) the miner configure all MSR registers
       # automatically.
                 DynamicUser = lib.mkDefault false;
-    };
-  };
+          };
+        };
 }
