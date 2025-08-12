@@ -61,7 +61,7 @@
   nix.settings.allowed-users = [ "@users" ];
         #  users.mutableUsers = false; # only allow declartively initiated users
 
-  security.lockKernelModules = true;
+        #security.lockKernelModules = true;
   security.protectKernelImage = true;
 
   #security.allowSimultaneousMultithreading = false;
