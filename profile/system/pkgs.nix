@@ -94,6 +94,10 @@ environment.systemPackages = with pkgs; [
     aide
     kernel-hardening-checker
 
+    monero-cli
+    monero-gui
+    p2pool
+    xmrig
   ];
 
 }

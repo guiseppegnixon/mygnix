@@ -6,8 +6,11 @@
         ./config/btop.nix
         ./config/flameshot.nix
         ./config/git.nix
+                #        ./config/monero.nix
+                #        ./config/p2pool.nix
         ./config/plasma.nix
         ./config/gpg-agent.nix
+        ./config/yt-dlp.nix
   ];
 
   custom.pgp.enable = true;
