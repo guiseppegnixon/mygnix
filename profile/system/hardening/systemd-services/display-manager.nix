@@ -1,3 +1,5 @@
+{ lib, ... }:
+
 {
   systemd.services.display-manager.serviceConfig = {
     ProtectSystem = "full";
