@@ -3,7 +3,7 @@
 {
   imports =  [
     ./dnscrypt-proxy.nix
-    ./firewall.nix
+                #    ./firewall.nix
     ./usbguard.nix
     ./systemd-services/accounts-daemon.nix
     ./systemd-services/acipd.nix
