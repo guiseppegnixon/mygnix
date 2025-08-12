@@ -2,7 +2,7 @@
 
 {
   systemd.services.bluetooth.serviceConfig = {
-    ProtectKernelTunables = true;
+    ProtectKernelTunables = lib.mkForce true;
     ProtectKernelModules = lib.mkForce true;
     ProtectKernelLogs = true;
     ProtectHostname = true;
