@@ -143,9 +143,6 @@
     "net.core.default_qdisc" = "cake";
   };
 
-  # Hide kptrs even for processes with CAP_SYSLOG
-  boot.kernel.sysctl."kernel.kptr_restrict" = 2;
-
   # Disable ftrace debugging
   boot.kernel.sysctl."kernel.ftrace_enabled" = false;
 
