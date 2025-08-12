@@ -89,6 +89,9 @@ environment.systemPackages = with pkgs; [
     cewler
 
     lynis
+    clamav
+    chkrootkit
+    aide
     kernel-hardening-checker
 
   ];
