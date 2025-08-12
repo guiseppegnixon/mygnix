@@ -4,7 +4,9 @@
   lib,
   inputs,
   ...
-}: let
+}: 
+
+let
   blocklist_base = builtins.readFile inputs.oisd;
   extraBlocklist = '''';
   blocklist_txt = pkgs.writeText "blocklist.txt" ''

@@ -33,7 +33,6 @@ in {
     };
 
     environment.systemPackages = [pkgs.usbguard];
-    custom.security.usbguard.enable = true;
   };
 }
 
