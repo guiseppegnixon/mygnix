@@ -18,24 +18,6 @@
     },
     "flake-parts": {
       "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib"
-      },
-      "locked": {
-        "lastModified": 1754091436,
-        "narHash": "sha256-XKqDMN1/Qj1DKivQvscI4vmHfDfvYR2pfuFOJiCeewM=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "67df8c627c2c39c41dbec76a1f201929929ab0bd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
-    "flake-parts_2": {
-      "inputs": {
         "nixpkgs-lib": [
           "nvf",
           "nixpkgs"
@@ -47,6 +29,24 @@
         "owner": "hercules-ci",
         "repo": "flake-parts",
         "rev": "af66ad14b28a127c5c0f3bbb298218fc63528a18",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1754091436,
+        "narHash": "sha256-XKqDMN1/Qj1DKivQvscI4vmHfDfvYR2pfuFOJiCeewM=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "67df8c627c2c39c41dbec76a1f201929929ab0bd",
         "type": "github"
       },
       "original": {
@@ -91,27 +91,6 @@
         "type": "github"
       }
     },
-    "nixos-p2pool-module": {
-      "inputs": {
-        "flake-parts": "flake-parts",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1754159902,
-        "narHash": "sha256-hQsWnl7V9YX10mOIdDPsjKbJDdfLIqGm+NotxST0z7o=",
-        "owner": "jacoMalan1",
-        "repo": "nixos-p2pool-module",
-        "rev": "ee03a46068fd4a2f91bfec67bfeeb8b2a3974715",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jacoMalan1",
-        "repo": "nixos-p2pool-module",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1754937576,
@@ -146,7 +125,7 @@
     "nvf": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-parts": "flake-parts_2",
+        "flake-parts": "flake-parts",
         "mnw": "mnw",
         "nixpkgs": [
           "nixpkgs"
@@ -170,13 +149,34 @@
     "oisd": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-LaeODRb1nmYftApkI42isScV4bWCJhieasZ81uA+k6Y=",
+        "narHash": "sha256-iVhDeljU4VRayfSMuqP60m7QVREFpyR+OYJUKYzUs9E=",
         "type": "file",
         "url": "https://big.oisd.nl/domainswild"
       },
       "original": {
         "type": "file",
         "url": "https://big.oisd.nl/domainswild"
+      }
+    },
+    "p2pool": {
+      "inputs": {
+        "flake-parts": "flake-parts_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754159902,
+        "narHash": "sha256-hQsWnl7V9YX10mOIdDPsjKbJDdfLIqGm+NotxST0z7o=",
+        "owner": "jacoMalan1",
+        "repo": "nixos-p2pool-module",
+        "rev": "ee03a46068fd4a2f91bfec67bfeeb8b2a3974715",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jacoMalan1",
+        "repo": "nixos-p2pool-module",
+        "type": "github"
       }
     },
     "plasma-manager": {
@@ -205,10 +205,10 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixos-p2pool-module": "nixos-p2pool-module",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "oisd": "oisd",
+        "p2pool": "p2pool",
         "plasma-manager": "plasma-manager"
       }
     },
