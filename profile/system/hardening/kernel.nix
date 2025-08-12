@@ -1,6 +1,7 @@
 { config, inputs, lib, ... }:
 
 {
+  services.scx.enable = true;
                 #security.lockKernelModules = true;
   security.protectKernelImage = true;
 
