@@ -20,6 +20,8 @@
       grep = "rg";
       nv = "nvim";
       nf = "cd ~/.nixfiles";
+      cf = "clear; fastfetch";
+      poweroff = "sudo poweroff";
     };
   };
 
