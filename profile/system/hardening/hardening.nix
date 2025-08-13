@@ -7,7 +7,7 @@
     ./dnscrypt-proxy.nix
     ./firewall.nix
     ./kernel.nix
-    ./usbguard.nix
+    #./usbguard.nix
                 #./systemd-services/accounts-daemon.nix
                 #./systemd-services/acipd.nix
                 #./systemd-services/auditd.nix
