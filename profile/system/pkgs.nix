@@ -94,6 +94,7 @@ environment.systemPackages = with pkgs; [
     kernel-hardening-checker
 
     sbctl
+    fwupd
 
     monero-cli
     monero-gui
