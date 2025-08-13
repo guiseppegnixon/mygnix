@@ -8,7 +8,6 @@ environment.systemPackages = with pkgs; [
     curl
     git
 
-    ghostty
     alacritty
 
     zsh
@@ -64,7 +63,6 @@ environment.systemPackages = with pkgs; [
     spotify
     reaper
     libreoffice-qt-fresh
-    psst
 
     bottles
     virt-manager
