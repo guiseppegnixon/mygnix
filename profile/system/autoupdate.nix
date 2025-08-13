@@ -14,6 +14,7 @@
 
   #clean up old deployments
   nix.optimise.automatic = true;
+  nix.settings.max-jobs = "auto";
   nix.gc = {
     automatic = true;
     dates = "daily";

@@ -9,10 +9,8 @@
       ./system/auditd-minimal.nix
       ./system/autoupdate.nix
       ./system/docker.nix
-                #      ./system/hardening/dnscrypt-proxy.nix
-                #./system/hardening/firewall.nix
+      ./system/fwupd.nix
       ./system/hardening/hardening.nix
-                #./system/hardening/usbguard.nix
       ./system/hardware-configuration.nix
       ./system/laptop.nix
       ./system/network.nix
