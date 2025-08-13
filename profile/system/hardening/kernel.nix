@@ -1,7 +1,6 @@
 { config, inputs, lib, ... }:
 
 {
-  services.scx.enable = true;
                 #security.lockKernelModules = true;
   security.protectKernelImage = true;
 
@@ -38,7 +37,7 @@
         # disables vsyscalls, they've been replaced with vDSO
         "vsyscall=none"
         # disables debugfs, which exposes sensitive info about the kernel
-        "debugfs=off"
+       #"debugfs=off"
         # certain exploits cause an "oops", this makes the kernel panic if an "oops" occurs
         "oops=panic"
         # only alows kernel modules that have been signed with a valid key to be loaded
