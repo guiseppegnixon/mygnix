@@ -40,7 +40,7 @@
                 #./systemd-services/wpa_supplicant.nix
   ];
 
-  custom.security.usbguard.enable = true;
+  #custom.security.usbguard.enable = true;
 
   #randomize MAC
   networking.networkmanager = {
