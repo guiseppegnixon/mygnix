@@ -2,7 +2,8 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,12 +44,12 @@
           nvf.nixosModules.default
           home-manager.nixosModules.home-manager
           {
-	    home-manager.backupFileExtension = "hm-backup";
+	          home-manager.backupFileExtension = "hm-backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-	    home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+	          home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
             home-manager.users.${flakeSettings.username} = import ./profile/home.nix;
-	    home-manager.extraSpecialArgs = { inherit flakeSettings; };
+	          home-manager.extraSpecialArgs = { inherit flakeSettings; };
           }
         ];
       };
