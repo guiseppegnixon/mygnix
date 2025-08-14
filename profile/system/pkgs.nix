@@ -38,6 +38,7 @@ environment.systemPackages = with pkgs; [
     keepassxc
     veracrypt
     borgbackup
+    vorta
 
     privoxy
     mullvad-vpn
