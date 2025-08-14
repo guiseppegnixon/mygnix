@@ -93,6 +93,7 @@ environment.systemPackages = with pkgs; [
 
     sbctl
     fwupd
+    e2fsprogs
 
     monero-cli
     monero-gui
