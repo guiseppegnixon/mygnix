@@ -7,7 +7,7 @@
     ./dnscrypt-proxy.nix
     ./firewall.nix
     ./kernel.nix
-    #./usbguard.nix
+    ./usbguard.nix
                 #./systemd-services/accounts-daemon.nix
                 #./systemd-services/acipd.nix
                 #./systemd-services/auditd.nix
@@ -40,7 +40,7 @@
                 #./systemd-services/wpa_supplicant.nix
   ];
 
-  #custom.security.usbguard.enable = false;
+  custom.security.usbguard.enable = true;
 
   #randomize MAC
   networking.networkmanager = {
