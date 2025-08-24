@@ -3,7 +3,6 @@
 {
   imports = [
       ./config/fonts.nix
-      ./config/nushell.nix
       ./config/nvf.nix
       ./config/program-settings.nix
       ./config/starship.nix
