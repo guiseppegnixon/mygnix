@@ -22,7 +22,7 @@
       nf = "cd ~/.nixfiles";
       cf = "clear; fastfetch";
       poweroff = "sudo poweroff";
-      #cd = "z";
+      cd = "z";
     };
   };
 }
