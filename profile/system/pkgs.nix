@@ -17,6 +17,12 @@ environment.systemPackages = with pkgs; [
     ripgrep
     anew
     btop
+    zoxide
+    fzf
+    du-dust
+    ouch
+    fd
+    nushell
 
     neovim
     xclip

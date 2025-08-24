@@ -5,7 +5,10 @@
       ./config/fonts.nix
       ./config/nvf.nix
       ./config/program-settings.nix
+      ./config/starship.nix
       ./config/stevenblack-hosts.nix
+      ./config/virt-manager.nix 
+      ./config/zsh.nix
       ./system/auditd-minimal.nix
       ./system/autoupdate.nix
       ./system/docker.nix
