@@ -16,6 +16,8 @@
 
   custom.pgp.enable = true;
 
+  programs.yazi.enableZshIntegration = true;
+
   home.username = flakeSettings.username;
   home.homeDirectory = ( "/home" + ("/" + flakeSettings.username));
 
