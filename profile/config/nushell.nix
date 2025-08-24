@@ -4,9 +4,9 @@
   programs.nushell = {
     enable = true;
     plugins = [
-      pkgs.nushellPlugins.net
+      #pkgs.nushellPlugins.net
       pkgs.nushellPlugins.skim
-      pkgs.nushellPlugins.units
+      #pkgs.nushellPlugins.units
       pkgs.nushellPlugins.highlight
     ];
   };

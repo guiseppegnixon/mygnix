@@ -22,7 +22,7 @@ environment.systemPackages = with pkgs; [
     du-dust
     ouch
     fd
-    nushellFull
+    nushell
 
     neovim
     xclip
