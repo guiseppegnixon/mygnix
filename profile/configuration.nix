@@ -3,11 +3,15 @@
 {
   imports = [
       ./config/fonts.nix
+      ./config/nushell.nix
       ./config/nvf.nix
       ./config/program-settings.nix
       ./config/starship.nix
       ./config/stevenblack-hosts.nix
+      ./config/tmux.nix
       ./config/virt-manager.nix 
+      ./config/yazi.nix
+      ./config/zoxide.nix
       ./config/zsh.nix
       ./system/auditd-minimal.nix
       ./system/autoupdate.nix
