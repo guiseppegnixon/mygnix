@@ -52,6 +52,7 @@ environment.systemPackages = with pkgs; [
 
     localsend
     syncthing
+    flatpak
 
     ansible
     vagrant
