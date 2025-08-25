@@ -2,6 +2,7 @@
 
 {
   imports = [
+      ./config/flatpak.nix
       ./config/fonts.nix
       ./config/nvf.nix
       ./config/program-settings.nix
