@@ -37,7 +37,7 @@
       };
     
     in { 
-      nixosConfigurations.nixheim = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${flakeSettings.hostname} = nixpkgs.lib.nixosSystem {
 	specialArgs = { inherit inputs flakeSettings; };
         modules = [
           ./profile/configuration.nix
