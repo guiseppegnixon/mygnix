@@ -47,7 +47,7 @@
 	          home-manager.backupFileExtension = "hm-backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-	          home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+	          home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
             home-manager.users.${flakeSettings.username} = import ./profile/home.nix;
 	          home-manager.extraSpecialArgs = { inherit flakeSettings; };
           }
