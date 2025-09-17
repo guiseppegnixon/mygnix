@@ -27,6 +27,7 @@
           python.enable = true;
           bash.enable = true;
           sql.enable = true;
+          markdown.enable = true;
           rust = {
             enable = true;
             crates.enable = true;
