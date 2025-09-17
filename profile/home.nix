@@ -8,6 +8,7 @@
         ./config/git.nix
         ./config/gpg-agent.nix
        #./config/monero.nix
+        ./config/neovide.nix
         ./config/nushell.nix
        #./config/p2pool.nix
         ./config/plasma.nix
