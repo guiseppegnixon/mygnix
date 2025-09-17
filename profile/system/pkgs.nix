@@ -107,6 +107,10 @@ environment.systemPackages = with pkgs; [
     monero-gui
     p2pool
     xmrig
+
+    freeplane
+    goofcord
+    neovide
   ];
 
 }

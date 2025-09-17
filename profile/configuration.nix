@@ -5,6 +5,7 @@
       ./config/flatpak.nix
       ./config/fonts.nix
       ./config/nvf.nix
+      /.config/offsec_packages.nix
       ./config/program-settings.nix
       ./config/starship.nix
       ./config/stevenblack-hosts.nix
