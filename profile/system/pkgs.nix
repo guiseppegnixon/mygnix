@@ -95,7 +95,6 @@ environment.systemPackages = with pkgs; [
 
     lynis
     clamav
-    chkrootkit
     aide
     kernel-hardening-checker
 
