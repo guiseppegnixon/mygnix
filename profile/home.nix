@@ -12,6 +12,7 @@
         ./config/nushell.nix
        #./config/p2pool.nix
         ./config/plasma.nix
+        ./config/tmux.nix
         ./config/yt-dlp.nix
   ];
 

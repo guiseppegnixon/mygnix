@@ -3,7 +3,6 @@
 {
   programs.tmux = {
     enable = true;
-    prefix = "C-space";
     clock24 = true;
     plugins = [
       pkgs.tmuxPlugins.nord

@@ -9,7 +9,6 @@
       ./config/program-settings.nix
       ./config/starship.nix
       ./config/stevenblack-hosts.nix
-      ./config/tmux.nix
       ./config/virt-manager.nix 
       ./config/yazi.nix
       ./config/zoxide.nix
