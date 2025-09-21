@@ -110,6 +110,8 @@ environment.systemPackages = with pkgs; [
     freeplane
     goofcord
     neovide
+
+    mat2
   ];
 
 }
