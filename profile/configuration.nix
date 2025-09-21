@@ -21,7 +21,9 @@
       ./system/hardening/hardening.nix
       ./system/hardware-configuration.nix
       ./system/laptop.nix
+    #./system/lanza.nix
       ./system/network.nix
+    #./system/persist.nix
       ./system/pkgs.nix
       ./system/schedulers.nix
       ./system/system.nix
