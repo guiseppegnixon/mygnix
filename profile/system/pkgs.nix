@@ -112,6 +112,10 @@ environment.systemPackages = with pkgs; [
     neovide
 
     mat2
+
+    skim
+    thumbs
+    tmuxifier
   ];
 
 }

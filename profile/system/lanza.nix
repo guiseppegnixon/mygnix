@@ -15,7 +15,7 @@
   boot.lanzaboote = {
     enable = true;
     pkiBundle = "/var/lib/sbctl";
-    pcr-measure = true;
+    #    pcr-measure = true;
   };
 }
 
