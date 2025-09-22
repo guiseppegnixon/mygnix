@@ -1,0 +1,9 @@
+  fileSystems = {
+    "/"             = { device = "none"; fsType = "tmpfs"; options = [ "defaults" "size=2G" "mode=755" ]; };
+    "/boot"         = { device = "/dev/disk/by-label/NIXBOOT"; fsType = "vfat"; };
+    "/nix"          = { device = "/dev/disk/by-label/NIXROOT"; fsType = "btrfs"; options = [ "subvol=@nix", "compress=zstd", "noatime" ]; };
+    "/var/log"      = { device = "/dev/disk/by-label/NIXROOT"; fsType = "btrfs"; options = [ "subvol=@log", "compress=zstd", "noatime" ]; };
+    "/persist"      = { device = "/dev/disk/by-label/NIXROOT"; fsType = "btrfs"; options = [ "subvol=@persist", "compress=zstd", "noatime" ]; };
+    # Mount the @home subvolume inside /persist for impermanence to manage
+    "/persist/home" = { device = "/dev/disk/by-label/NIXROOT"; fsType = "btrfs"; options = [ "subvol=@home", "compress=zstd", "noatime" ]; };
+  };
