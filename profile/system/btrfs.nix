@@ -38,7 +38,7 @@
     "/persist/var/log" = {
       device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";
-      options = [];
+      options = [ "subvol=@log" "compress=zstd" "noatime" ];
       neededForBoot = true;
     };
   };
