@@ -4,10 +4,10 @@ This repository began as a backup for my NixOS configuration and now simultaneou
 
 This guide was compiled by Gemini Pro 2.5 and refined by myself through iterative VM installs. It directly utilizes source material / was heavily inspired by the following sources:
 
-https://willbush.dev/blog/impermanent-nixos/
-https://laniakita.com/blog/nixos-fde-tpm-hm-guide
-https://notashelf.dev/posts/impermanence
-https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
-https://github.com/nix-community/impermanence
+- https://willbush.dev/blog/impermanent-nixos/
+- https://laniakita.com/blog/nixos-fde-tpm-hm-guide
+- https://notashelf.dev/posts/impermanence
+- https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
+- https://github.com/nix-community/impermanence
 
 Feel free to use these files and the associated guide at your own risk. If you mess up, it will be funny.
