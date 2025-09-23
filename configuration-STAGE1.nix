@@ -11,7 +11,7 @@
   users.users.your-username = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    initialPassword = "your-temporary-password";
+    initialPassword = "asd";
   };
   
   # --- System Settings ---
