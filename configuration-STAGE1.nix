@@ -8,7 +8,7 @@
   networking.firewall.enable = true;
 
   # --- Users ---
-  users.users.your-username = {
+  users.users.changeme = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "asd";
