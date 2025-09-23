@@ -74,7 +74,7 @@ sudo umount /mnt
 
 ### **Phase 4: Mounting for True Impermanence**
 
-This is the core of the impermanent architecture. Notice we do **not** mount a persistent volume to `/home`.
+This is the core of the impermanent architecture.
 
 1.  **Mount Root to RAM:**
 ```bash
