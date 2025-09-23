@@ -21,10 +21,10 @@ echo "Backup complete."
 echo "Downloading stage 1 configuration files..."
 
 # Fetch the main configuration file.
-curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/profile/configuration-STAGE1.nix -o "$CONFIG_DIR/configuration.nix"
+curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/configuration-STAGE1.nix -o "$CONFIG_DIR/configuration.nix"
 
 # Fetch the flake file.
-curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/profile/flake-STAGE1.nix -o "$CONFIG_DIR/flake.nix"
+curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/flake-STAGE1.nix -o "$CONFIG_DIR/flake.nix"
 
 # Download the modular configuration components.
 echo "Downloading system modules..."
