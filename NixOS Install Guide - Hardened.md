@@ -1,9 +1,3 @@
-Of course. Here is the definitive, step-by-step guide for building a secure NixOS laptop with a **truly impermanent `/home` directory**.
-
-This version incorporates all our corrections and decisions, ensuring every step is consistent with the goal of a stateless user environment by default, with persistence explicitly opted into.
-
-***
-
 ### **A Definitive Guide to a Secure, Impermanent NixOS Laptop (Final Version)**
 
 This guide creates a system where the operating system and user environment are ephemeral by default, maximizing security and reproducibility. All persistent data is explicitly managed.
