@@ -141,7 +141,8 @@ sudo nixos-generate-config --root /mnt
 }
 ```
 
-3.  **Create your `persistence.nix` file:** As we discussed, you have this file prepared. Place it at `/mnt/etc/nixos/persistence.nix`. This file is responsible for defining all system and user state that needs to survive a reboot.
+3.  **Download Preliminary `.nix` Files**
+
 ```sh
 curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/imperm-prelim.sh -o /mnt/etc/nixos/imperm-prelim.sh
 
