@@ -20,11 +20,15 @@ echo "Backup complete."
 # Download the new, correct configuration files from the repository.
 echo "Downloading stage 1 configuration files..."
 
-# Fetch the main configuration file.
+# Fetch the main configuration files.
 curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/configuration-STAGE1.nix -o "$CONFIG_DIR/configuration.nix"
+curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/configuration-STAGE2.nix -o "$CONFIG_DIR/configuration-STAGE2.nix"
+curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/configuration-STAGE3.nix -o "$CONFIG_DIR/configuration-STAGE3.nix"
 
-# Fetch the flake file.
+# Fetch the flake files.
 curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/flake-STAGE1.nix -o "$CONFIG_DIR/flake.nix"
+curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/flake-STAGE2.nix -o "$CONFIG_DIR/flake-STAGE2.nix"
+curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/flake-STAGE3.nix -o "$CONFIG_DIR/flake-STAGE3.nix"
 
 # Download the modular configuration components.
 echo "Downloading system modules..."
@@ -42,4 +46,5 @@ echo ""
 echo "----------------------------------------"
 echo "All configuration files downloaded successfully."
 echo "Please review the new files to ensure all configurations are correct. Ensure hardware-configuration.nix is updated!"
+echo "PLEASE ENSURE HARDWARE-CONFIGURATION.NIX IS UPDATED PRIOR TO INITIATING A PHASE 2 AND PHASE 3 INSTALL. IF YOU DO NOT, THE SYSTEM WILL NOT BOOT."
 echo "----------------------------------------"
