@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, flakeSettings, ... }:
 
 {
   environment.persistence."/persist" = {
@@ -18,7 +18,7 @@
       "/etc/machine-id"
     ];
 
-    users.niximperm = {
+    users.${flakeSettings.username} = {
       directories = [
         ".config"
         ".local"

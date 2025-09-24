@@ -8,7 +8,7 @@
   networking.firewall.enable = true;
 
   # --- Users ---
-  users.users.changeme = {
+  users.users.niximperm = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "asd";
@@ -23,7 +23,7 @@
       
   # --- Basic System Settings ---
   time.timeZone = "America/New_York";
-  networking.hostName = "CHANGEMEBITCHPLEASE";
+  networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   environment.systemPackages = with pkgs; [ 
 	  neovim 

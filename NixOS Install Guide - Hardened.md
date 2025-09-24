@@ -117,31 +117,7 @@ sudo mount -o bind /mnt/persist/etc/nixos /mnt/etc/nixos
 sudo nixos-generate-config --root /mnt
 ```
 
-2.  **Create `flake.nix`:**
-`sudo nano /mnt/etc/nixos/flake.nix`
-```nix
-{
-  description = "My Secure Impermanent NixOS Flake";
-
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    impermanence.url = "github:nix-community/impermanence";
-
-  };
-
-  outputs = { self, nixpkgs, impermanence, ... }: {
-    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        impermanence.nixosModules.impermanence
-      ];
-    };
-  };
-}
-```
-
-3.  **Download Preliminary `.nix` Files**
+2.  **Download Preliminary `.nix` Files**
 
 ```sh
 curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/imperm-prelim.sh -o /mnt/etc/nixos/imperm-prelim.sh
@@ -166,7 +142,7 @@ curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/pro
 curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/profile/system/btrfs.nix -o /mnt/persist/etc/nixos/btrfs.nix
 ``` 
 
-4.  **Edit `hardware-configuration.nix`:**
+3.  **Edit `hardware-configuration.nix`:**
     *   **Delete** any existing `fileSystems` entries.
 `sudo nano /mnt/etc/nixos/hardware-configuration.nix`
 ```nix
@@ -185,14 +161,14 @@ curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/pro
 }
 ```
 
-5.  **Edit `configuration.nix`:**
+4.  **Edit `configuration.nix`:**
     *   **Remove** any `fileSystems` and `boot.initrd.luks` blocks.
     *   **Import** your `persistence.nix` file.
 `sudo nano /mnt/etc/nixos/configuration.nix`
 ```nix
 { pkgs, ... }: {
 	imports = [
-	  ./hardware-configuration.nix
+	./hardware-configuration.nix
     ./persist.nix # This file now manages ALL persistent state
   ];
 
@@ -228,9 +204,8 @@ curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/pro
 }
 ```
 
-6. Edit `persist.nix` to remove references to `flakeSettings`
-	1. Change `users.users.[username]`
-	2. Change `initialPassword`
+5. Edit `persist.nix` to remove references to `flakeSettings`
+
 ---
 
 ### **Phase 6: Installation and First Boot**
