@@ -23,8 +23,28 @@ This guide creates a system where the operating system and user environment are 
     *   Verify the system clock is correct.
 4.  **Boot and Prepare:**
     *   Boot from the NixOS USB drive.
-    *   Connect to the internet (`iwctl` or `nmtui`) and verify with `ping nixos.org`.
     *   Identify your target disk with `lsblk`. This guide will use `<your-disk>` (e.g., `/dev/nvme0n1`).
+5.  **Connect to Wifi:** (if needed):
+```sh 
+sudo ip link
+sudo ip link set [wireless interface] up
+sudo systemctl start wpa_supplicant
+sudo wpa_cli
+
+> scan
+> scan_results
+> add_network
+0
+> set_network 0 ssid "NETWORKNAME"
+OK
+> set_network 0 psk "MYPASSWORD"
+OK
+> set_network 0 key_mgmt WPA-PSK
+OK
+> enable_network 0
+OK
+> quit
+```
 
 ---
 
