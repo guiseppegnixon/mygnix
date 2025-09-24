@@ -36,9 +36,6 @@ echo "Downloading system modules..."
 # Fetch the persistence module.
 curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/profile/system/persist.nix -o "$CONFIG_DIR/persist.nix"
 
-# Fetch the Lanzaboote module.
-curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/profile/system/lanza.nix -o "$CONFIG_DIR/lanza.nix"
-
 # Fetch the BTRFS module.
 curl -L https://raw.githubusercontent.com/guiseppegnixon/mygnix/main/profile/system/btrfs.nix -o "$CONFIG_DIR/btrfs.nix"
 
