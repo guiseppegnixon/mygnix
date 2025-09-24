@@ -236,6 +236,7 @@ cd ~/.nixfiles
 ```sh
 sudo cp /persist/etc/nixos/hardware-configuration.nix profile/system/hardware-configuration.nix
 ```
+- ENSURE UUID IS CORRECT OR SYSTEM WILL NOT BOOT
 3. Position stage2 files:
 ```sh
 mv flake-STAGE2.nix flake.nix
