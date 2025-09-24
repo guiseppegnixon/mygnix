@@ -240,11 +240,12 @@ sudo cp /persist/etc/nixos/hardware-configuration.nix profile/system/hardware-co
 ```sh
 mv flake-STAGE2.nix flake.nix
 mv configuration-STAGE2.nix profile/configuration.nix
+mv profile/system/persist-STAGE2.nix profile/system/persist.nix
 ```
 4. Edit `flake.nix` to change username, hostname, and email
 5. Install full system (sans secure boot)
 ```sh
-sudo nixos-install --flake .#[hostname]
+sudo nixos-rebuild switch --flake .#[hostname]
 ```
 ---
 ### Phase 8: Enable Lanzaboote and Implement Secure Boot
