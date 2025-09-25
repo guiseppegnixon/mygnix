@@ -235,6 +235,7 @@ sudo nixos-install --flake /mnt/persist/etc/nixos#laptop
 
 2.  **Reboot:** 
 ``` sh
+sudo mv /root/luks-header-backup.img /mnt/persist
 sudo umount -R /mnt 
 sudo cryptsetup close /dev/mapper/crypted
 sudo reboot
