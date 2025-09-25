@@ -264,7 +264,8 @@ mv configuration-STAGE2.nix profile/configuration.nix
 mv profile/system/persist-STAGE2.nix profile/system/persist.nix
 ```
 4. Edit `flake.nix` to change username, hostname, and email
-5. Install full system (sans secure boot)
+5. Edit `profile/system/system.nix` to remove stray `boot.initrd.luks.devices` entry. 
+6. Install full system (sans secure boot)
 - It may be beneficial to add `nix.settings.download-buffer-size = 524288000;` to `configuration.nix`
 ```sh
 sudo nixos-rebuild switch --flake .#[hostname]
