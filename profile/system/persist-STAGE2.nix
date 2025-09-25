@@ -3,7 +3,6 @@
 {
   environment.persistence."/persist" = {
     directories = [
-      "/etc/cups"
       "/etc/mullvad-vpn"
       "/etc/NetworkManager"
       "/etc/nixos"

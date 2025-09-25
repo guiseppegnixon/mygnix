@@ -62,11 +62,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1758719930,
-        "narHash": "sha256-DgHe1026Ob49CPegPMiWj1HNtlMTGQzfSZQQVlHC950=",
+        "lastModified": 1758786164,
+        "narHash": "sha256-o1WyZI2T7yPywiY06Swt8AZH/ewKU1nLqDw8fw1fwPc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "142acd7a7d9eb7f0bb647f053b4ddfd01fdfbf1d",
+        "rev": "232454052008027c8e925979d13a951e92729781",
         "type": "github"
       },
       "original": {
@@ -148,7 +148,7 @@
     "oisd": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-F5LqeF7ltk1at7y1XmYeysdMpI5fnKfu+oQe4h6XPvQ=",
+        "narHash": "sha256-Zsgb78cBABdL+lhMnyOceMh0CVQ++2vmJMae22yo9Bs=",
         "type": "file",
         "url": "https://big.oisd.nl/domainswild"
       },
