@@ -4,6 +4,8 @@
     ./persist.nix # This file now manages ALL persistent state
   ];
 
+  nix.settings.download-buffer-size = 524288000;
+
   # --- Security Hardening ---
   networking.firewall.enable = true;
 
