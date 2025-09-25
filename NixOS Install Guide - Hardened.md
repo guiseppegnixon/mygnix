@@ -249,6 +249,7 @@ sudo reboot
 ```sh
 git clone https://github.com/guiseppegnixon/mygnix.git ~/.nixfiles
 cd ~/.nixfiles
+rm -rfv .git
 ```
 
 2. **REPLACE `~/.nixfiles/profile/system/hardware-configuration.nix` WITH `/persist/etc/nixos/hardware-configuration.nix`**
@@ -264,11 +265,13 @@ mv profile/system/persist-STAGE2.nix profile/system/persist.nix
 ```
 4. Edit `flake.nix` to change username, hostname, and email
 5. Edit `profile/system/system.nix` to remove stray `boot.initrd.luks.devices` entry. 
-6. Install full system (sans secure boot)
-- It may be beneficial to add `nix.settings.download-buffer-size = 524288000;` to `configuration.nix`
+6. Edit `profile/system/hardening/hardening.nix` to comment out `./dnscrypt-proxy.nix` entry. *Re-enable following full system install*
+7. Install full system (sans secure boot)
 ```sh
 sudo nixos-rebuild switch --flake .#[hostname]
 ```
+- It may be beneficial to add `nix.settings.download-buffer-size = 524288000;` to `configuration.nix`
+
 ---
 ### Phase 8: Enable Lanzaboote and Implement Secure Boot
 1. Connect to Wifi (if needed)

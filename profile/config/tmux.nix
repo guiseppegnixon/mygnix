@@ -15,6 +15,6 @@
       pkgs.tmuxPlugins.dotbar
     ];
     sensibleOnTop = true;
-    baseIndex = 1
+    baseIndex = 1;
   };
 }
