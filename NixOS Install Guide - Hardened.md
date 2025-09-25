@@ -271,6 +271,12 @@ sudo nixos-rebuild switch --flake .#[hostname]
 ```
 ---
 ### Phase 8: Enable Lanzaboote and Implement Secure Boot
+0. Connect to Wifi (if needed)
+```sh 
+nmcli radio wifi on
+nmcli dev wifi list
+nmcli --ask dev wifi connect "NETWORDSSID"
+```
 
 1. Prerequisites - UEFI must be enabled and the system must be installed with `systemd-boot` as the bootloader. Lanzaboote will be switched to following first reboot(s)
 ```sh
