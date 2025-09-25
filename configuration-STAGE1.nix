@@ -13,7 +13,7 @@
   users.users.niximperm = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    initialPassword = "asd";
+    password = "asd";
   };
   
   # --- System Settings ---

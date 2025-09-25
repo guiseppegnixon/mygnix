@@ -15,6 +15,9 @@
 
     files = [
       "/etc/machine-id"
+      "/etc/passwd"
+      "/etc/shadow"
+      "/etc/group"
     ];
 
     users.${flakeSettings.username} = {
