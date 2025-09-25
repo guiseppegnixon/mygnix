@@ -271,7 +271,7 @@ sudo nixos-rebuild switch --flake .#[hostname]
 ```
 ---
 ### Phase 8: Enable Lanzaboote and Implement Secure Boot
-0. Connect to Wifi (if needed)
+1. Connect to Wifi (if needed)
 ```sh 
 nmcli radio wifi on
 nmcli dev wifi list
