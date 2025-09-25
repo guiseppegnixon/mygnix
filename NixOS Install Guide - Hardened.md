@@ -140,7 +140,7 @@ sudo nixos-generate-config --root /mnt
 2.  **Download Preliminary `.nix` Files**
 
 ```sh
-curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/imperm-prelim.sh -o /mnt/etc/nixos/imperm-prelim.sh
+curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/imperm-prelim.sh -o /mnt/persist/etc/nixos/imperm-prelim.sh
 
 chmod +x /mnt/persist/etc/nixos/imperm-prelim.sh 
 ```
@@ -223,8 +223,6 @@ curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/pro
   system.stateVersion = "25.05"; 
 }
 ```
-
-5. Edit `persist.nix` to remove references to `flakeSettings`
 
 ---
 
