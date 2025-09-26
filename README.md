@@ -14,7 +14,8 @@ Feel free to use these files and the associated guide at your own risk. If you m
 
 ### Instructions
 
-1. Boot into minimal NixOS ISO.
+0. Boot into minimal NixOS ISO.
+1. `sudo su -`
 2. Connect to internet.
 3. `curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/imperm-install.sh`
 4. `chmod +x imperm-install.sh`
