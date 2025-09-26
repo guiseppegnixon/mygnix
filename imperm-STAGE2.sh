@@ -13,5 +13,6 @@ mv profile/system/persist-STAGE2.nix profile/system/persist.nix
 nvim flake.nix
 nvim profile/system/system.nix
 nvim profile/system/hardening/hardening.nix
+nvim profile/system/users.nix
 
 sudo nixos-rebuild switch --flake .#nixos #CHANGEME
