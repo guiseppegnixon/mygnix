@@ -24,7 +24,7 @@
       ./system/network.nix
     #./system/persist.nix
       ./system/pkgs.nix
-      ./system/pkgs-unstable.nix
+    #./system/pkgs-unstable.nix
       ./system/schedulers.nix
       ./system/system.nix
       ./system/users.nix
