@@ -2,7 +2,7 @@
 
 {
 
-environment.systemPackages = with flakeSettings.pkgs; [
+environment.systemPackages = with pkgs; [
     vim 
     wget
     curl
