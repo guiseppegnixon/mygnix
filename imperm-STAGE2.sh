@@ -6,13 +6,13 @@ rm -rfv ~/.nixfiles/.git
 
 cp -v /persist/etc/nixos/hardware-configuration.nix profile/system/hardware-configuration.nix
 
-mv flake-STAGE2.nix flake.nix
-mv configuration-STAGE2.nix profile/configuration.nix
-mv profile/system/persist-STAGE2.nix profile/system/persist.nix
-
+mv -v flake-STAGE2.nix flake.nix
 nvim flake.nix
-nvim profile/system/system.nix
-nvim profile/system/hardening/hardening.nix
-nvim profile/system/users.nix
 
-sudo nixos-rebuild switch --flake .#nixos #CHANGEME
+mv -v configuration-STAGE2.nix profile/configuration.nix
+mv -v profile/system/persist-STAGE2.nix profile/system/persist.nix
+mv -v profile/system/system-IMPERM.nix profile/system/system.nix
+mv -v profile/system/users-IMPERM.nix profile/system/users.nix
+mv -v profile/system/hardening/hardening-IMPERM.nix profile/system/hardening/hardening.nix
+
+sudo nixos-rebuild switch --flake .#nixos

@@ -41,6 +41,7 @@ chmod +x imperm-install.sh
 vim imperm-install.sh
 ./imperm-install.sh
 ```
+- The script will drop users into a vim session for `hardware-configuration.nix`. This file **must** be edited to remove all `filesystem` entries **AND** to import `./btrfs.nix`. `boot.initrd.luks.devices` must also be confirmed to be correct. **Otherwise, the installation will fail**.
 
 3. Verify script properly executes, then reboot.
  
