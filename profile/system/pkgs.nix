@@ -55,7 +55,7 @@ environment.systemPackages = with pkgs; [
     flatpak
 
     ansible
-    vagrant
+    #vagrant
 
     rustup
     python314
