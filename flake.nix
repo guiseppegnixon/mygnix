@@ -28,15 +28,15 @@
       };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nvf, plasma-manager, oisd, p2pool, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, p2pool, ... }:
     let 
       flakeSettings = {
         username = "guiseppe";
         hostname = "nixheim";
         system = "x86_64-linux";
 	      email = "guiseppegnixon@gmail.com";
-        pkgs = "nixpkgs.legacyPackages.${flakeSettings.system}";
-        pkgs-unstable = "nixpkgs-unstable.legacyPackages.${flakeSettings.system}";
+        #pkgs = "nixpkgs.legacyPackages.${flakeSettings.system}";
+        #pkgs-unstable = "nixpkgs-unstable.legacyPackages.${flakeSettings.system}";
       };
     
     in { 
