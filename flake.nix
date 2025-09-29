@@ -25,9 +25,10 @@
       url = "github:jacoMalan1/nixos-p2pool-module";
       inputs.nixpkgs.follows = "nixpkgs";          
       };
+    nixos-cli.url = "github:nix-community/nixos-cli";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, p2pool, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, p2pool, nixos-cli, ... }:
     let 
       flakeSettings = {
         username = "guiseppe";
@@ -42,6 +43,7 @@
         modules = [
           ./profile/configuration.nix
           nvf.nixosModules.default
+          nixos-cli.nixosModules.nixos-cli
           home-manager.nixosModules.home-manager
           {
 	          home-manager.backupFileExtension = "hm-backup";

@@ -32,9 +32,10 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-cli.url = "github:nix-community/nixos-cli";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, p2pool, impermanence, lanzaboote, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, p2pool, impermanence, lanzaboote, nixos-cli, ... }:
     let 
       flakeSettings = {
         username = "guiseppe";
@@ -51,6 +52,7 @@
           lanzaboote.nixosModules.lanzaboote
           impermanence.nixosModules.impermanence
           nvf.nixosModules.default
+          nixos-cli.nixosModules.nixos-cli
           home-manager.nixosModules.home-manager
           {
 	          home-manager.backupFileExtension = "hm-backup";

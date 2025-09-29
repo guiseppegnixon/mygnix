@@ -49,7 +49,6 @@
         ".zsh_history"
         ".gitconfig"
         ".viminfo"
-        ".gtkrc-2.0"
       ];
     };
   };
