@@ -2,8 +2,8 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,13 +27,15 @@
       };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nvf, plasma-manager, oisd, p2pool, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nvf, plasma-manager, oisd, p2pool, ... }:
     let 
       flakeSettings = {
         username = "guiseppe";
         hostname = "nixheim";
         system = "x86_64-linux";
-	email = "guiseppegnixon@gmail.com";
+	      email = "guiseppegnixon@gmail.com";
+        pkgs = "nixpkgs.legacyPackages.${flakeSettings.system}";
+        pkgs-unstable = "nixpkgs-unstable.legacyPackages.${flakeSettings.system}";
       };
     
     in { 

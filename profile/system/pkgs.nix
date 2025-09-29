@@ -2,7 +2,7 @@
 
 {
 
-environment.systemPackages = with pkgs; [
+environment.systemPackages = with flakeSettings.pkgs; [
     vim 
     wget
     curl
@@ -74,24 +74,6 @@ environment.systemPackages = with pkgs; [
 
     bottles
     virt-manager
-
-    caido
-
-    nmap
-    smap
-
-    subfinder
-    asnmap
-    gungnir
-
-    nuclei
-    katana
-    feroxbuster
-    sqlmap
-    gau
-    xnlinkfinder
-
-    cewler
 
     lynis
     clamav

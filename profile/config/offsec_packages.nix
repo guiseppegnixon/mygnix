@@ -2,10 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-    caido
-
     mubeng
 
+    asnmap
     findomain
     amass
     subfinder
@@ -20,7 +19,6 @@
     smap
     rustscan
     fingerprintx
-    nmap
 
     xh
     httpx
