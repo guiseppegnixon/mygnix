@@ -13,7 +13,7 @@
       ./config/yazi.nix
       ./config/zoxide.nix
       ./config/zsh.nix
-      ./system/auditd-minimal.nix
+      ./system/audit-full.nix
       ./system/autoupdate.nix
       ./system/docker.nix
       ./system/fwupd.nix
@@ -21,6 +21,7 @@
       ./system/hardware-configuration.nix
       ./system/laptop.nix
     #./system/lanza.nix
+      ./system/logging.nix
       ./system/network.nix
     #./system/persist.nix
       ./system/pkgs.nix

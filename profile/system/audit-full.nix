@@ -3,11 +3,17 @@
 # sudo aureport -u --failed --summary
 # sudo ausearch -k priv_escalation
 
-{ config, lib, pkg, ... }:
+{ config, lib, pkg, flakeSettings, ... }:
 
 {
-  # Enable both the kernel's audit framework and the user-space daemon
-  # that collects and writes events to disk.
+  services.journald = {
+    storage = "persistent";
+    compress = true;
+    extraConfig = ''
+      SystemMaxUse=1G
+    '';
+  };
+
   security.audit.enable = true;
   security.auditd.enable = true;
 
@@ -16,6 +22,12 @@
     # Start with a clean slate and make the rules immutable until the next reboot.
     # This prevents an attacker with root access from disabling the audit system.
     "-e 1" # Delete all previous rules.
+
+    # --- Identity and Access Management ---
+    # Monitor login/logout events and session initialization
+    "-w /var/log/faillog -p wa -k logins"
+    "-w /var/log/lastlog -p wa -k logins"
+    "-w /var/run/utmp -k session"
 
     # --- Monitor Access Denials ---
     # Log any system call that fails due to permission errors (EPERM/EACCES).
@@ -27,6 +39,7 @@
     # Log every execution of commands that can elevate user privileges.
     "-w /usr/bin/sudo -p x -k priv_escalation"
     "-w /usr/bin/su -p x -k priv_escalation"
+    "-S setuid -S seteuid -S setegid -k priv_escalation"
 
     # --- Monitor Sensitive System Files ---
     # Watch for any writes (w) or attribute changes (a) to critical files
@@ -35,7 +48,8 @@
     "-w /etc/shadow -p wa -k identity_change"
     "-w /etc/group -p wa -k identity_change"
     "-w /etc/sudoers -p wa -k sudoers_change"
-    "-w /etc/nixos/ -p wa -k nixos_config_change" # CRITICAL for our setup
+    "-w /etc/nixos/ -p wa -k nixos_config_change"
+    "-w /home/${flakeSettings.username}/.nixfiles/ -p wa -k nixos_config_change"
 
     # --- Monitor Kernel Module Manipulation ---
     # Loading or unloading kernel modules is a common technique for rootkits.
