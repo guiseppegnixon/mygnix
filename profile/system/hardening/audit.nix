@@ -4,9 +4,9 @@ let
   rulesFileContent = builtins.readFile ./audit.rules;
 in
 {
-  security.auditd.enable = lib.mkDefault true;
+  security.auditd.enable = lib.mkDefault false;
   security.audit = {
-    enable = lib.mkDefault true;
+    enable = lib.mkDefault false;
     rules =
       let
         lines = lib.strings.splitString "\n" rulesFileContent;
