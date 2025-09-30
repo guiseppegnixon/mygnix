@@ -21,7 +21,6 @@
       ./system/hardware-configuration.nix
       ./system/laptop.nix
     #./system/lanza.nix
-      ./system/logging.nix
       ./system/network.nix
     #./system/persist.nix
       ./system/pkgs.nix
