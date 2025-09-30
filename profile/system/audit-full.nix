@@ -20,7 +20,7 @@
     # --- Rule Immutability ---
     # Start with a clean slate and make the rules immutable until the next reboot.
     # This prevents an attacker with root access from disabling the audit system.
-    "-e 1" # Delete all previous rules.
+    # "-e 1"
 
     # --- Identity and Access Management ---
     # Monitor login/logout events and session initialization
@@ -53,9 +53,9 @@
 
     # --- Monitor Kernel Module Manipulation ---
     # Loading or unloading kernel modules is a common technique for rootkits.
-    "-w /sbin/insmod -p x -k kernel_module"
-    "-w /sbin/rmmod -p x -k kernel_module"
-    "-w /sbin/modprobe -p x -k kernel_module"
+    "-w /run/current-system/sw/bin/insmod -p x -k kernel_module"
+    "-w /run/current-system/sw/bin/rmmod -p x -k kernel_module"
+    "-w /run/current-system/sw/bin/modprobe -p x -k kernel_module"
 
     # --- Monitor System Identity Changes ---
     # Track changes to the system's network name or time.
@@ -64,6 +64,6 @@
 
     # --- Finalize Rules ---
     # Lock the configuration. No more rules can be added or changed until reboot.
-    "-e 2"
+    # "-e 2"
   ];
 }
