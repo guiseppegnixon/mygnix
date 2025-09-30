@@ -160,4 +160,19 @@ luksCryptenroller
 
 10. Reboot and verify proper boot sequence (including TPM2 LUKS unlock).
 
+---
+
+### Recommended Post-Install Configuration Steps
+
+1. Configure KDE.
+
+2. Import backups.
+
+3. Configure usbguard:
+```sh 
+sudo usbguard generate-policy > /var/lib/usbguard/usbguard-rules.conf
+```
+- this will configure an allowlist based on connected devices.
+- edit `profile/system/hardening/hardening.nix` to import `usbguard.nix` (simply uncomment the relevant line).
+
 

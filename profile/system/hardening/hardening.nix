@@ -42,6 +42,12 @@
 
   custom.security.usbguard.enable = true;
 
+  #custom audit rules
+  security.audit.rules = [
+    "-w /home/{flakeSettings.username}/.nixfiles -p wa -k nixos_config_change"
+    "-w /etc/nixos/ -p wa -k nixos_config_change"
+  ];
+
   #randomize MAC
   networking.networkmanager = {
     ethernet.macAddress = "stable";
