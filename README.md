@@ -175,4 +175,4 @@ sudo usbguard generate-policy > /var/lib/usbguard/usbguard-rules.conf
 - this will configure an allowlist based on connected devices.
 - edit `profile/system/hardening/hardening.nix` to import `usbguard.nix` (simply uncomment the relevant line).
 
-
+4. Edit `profile/system/hardening/audit.nix` **line 106** to reflect current username
