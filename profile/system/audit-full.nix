@@ -38,7 +38,8 @@
     # Log every execution of commands that can elevate user privileges.
     "-w /usr/bin/sudo -p x -k priv_escalation"
     "-w /usr/bin/su -p x -k priv_escalation"
-    "-S setuid -S seteuid -S setegid -k priv_escalation"
+    "-a always,exit -F arch=b64 -S execve -C uid!=euid -F euid=0 -k setuid"
+    "-a always,exit -F arch=b64 -S execve -C gid!=egid -F egid=0 -k setgid"
 
     # --- Monitor Sensitive System Files ---
     # Watch for any writes (w) or attribute changes (a) to critical files
@@ -48,7 +49,7 @@
     "-w /etc/group -p wa -k identity_change"
     "-w /etc/sudoers -p wa -k sudoers_change"
     "-w /etc/nixos/ -p wa -k nixos_config_change"
-    "-w /home/guiseppe/.nixfiles/ -p wa -k nixos_config_change"
+    "-w /home/${flakeSettings.username}/.nixfiles/ -p wa -k nixos_config_change"
 
     # --- Monitor Kernel Module Manipulation ---
     # Loading or unloading kernel modules is a common technique for rootkits.
