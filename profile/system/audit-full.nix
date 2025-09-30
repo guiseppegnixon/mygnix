@@ -38,8 +38,8 @@
     # Log every execution of commands that can elevate user privileges.
     "-w /usr/bin/sudo -p x -k priv_escalation"
     "-w /usr/bin/su -p x -k priv_escalation"
-    "-a always,exit -F arch=b64 -S execve -C uid!=euid -F euid=0 -k setuid"
-    "-a always,exit -F arch=b64 -S execve -C gid!=egid -F egid=0 -k setgid"
+    "-a always,exit -F arch=b64 -S all -C uid!=euid -F euid=0 -k setuid"
+    "-a always,exit -F arch=b64 -S all -C gid!=egid -F egid=0 -k setgid"
 
     # --- Monitor Sensitive System Files ---
     # Watch for any writes (w) or attribute changes (a) to critical files
