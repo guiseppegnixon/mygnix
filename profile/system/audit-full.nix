@@ -20,7 +20,7 @@
     # --- Rule Immutability ---
     # Start with a clean slate and make the rules immutable until the next reboot.
     # This prevents an attacker with root access from disabling the audit system.
-    # "-e 1"
+    "-e 1"
 
     # --- Identity and Access Management ---
     # Monitor login/logout events and session initialization
@@ -64,6 +64,6 @@
 
     # --- Finalize Rules ---
     # Lock the configuration. No more rules can be added or changed until reboot.
-    # "-e 2"
-  ];
+    "-e 2"
+    ];
 }

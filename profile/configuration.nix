@@ -13,7 +13,7 @@
       ./config/yazi.nix
       ./config/zoxide.nix
       ./config/zsh.nix
-    #./system/audit-full.nix
+      ./system/hardening/audit.nix
       ./system/autoupdate.nix
       ./system/docker.nix
       ./system/fwupd.nix
