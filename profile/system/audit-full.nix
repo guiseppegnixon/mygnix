@@ -8,7 +8,6 @@
 {
   services.journald = {
     storage = "persistent";
-    compress = true;
     extraConfig = ''
       SystemMaxUse=1G
     '';
