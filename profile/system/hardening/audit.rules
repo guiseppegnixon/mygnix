@@ -101,6 +101,9 @@
 ### https://access.redhat.com/solutions/2482221
 
 # Rules -----------------------------------------------------------------------
+## NixOS Config
+-w /etc/nixos/ -p wa -k nixos_config_change
+-w /home/${flakeSettings.username}/.nixfiles/ -p wa -k nixos_config_change
 
 ## Kernel parameters
 -w /etc/sysctl.conf -p wa -k sysctl
