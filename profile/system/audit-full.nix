@@ -48,7 +48,7 @@
     "-w /etc/group -p wa -k identity_change"
     "-w /etc/sudoers -p wa -k sudoers_change"
     "-w /etc/nixos/ -p wa -k nixos_config_change"
-    "-w /home/${flakeSettings.username}/.nixfiles/ -p wa -k nixos_config_change"
+    "-w /home/guiseppe/.nixfiles/ -p wa -k nixos_config_change"
 
     # --- Monitor Kernel Module Manipulation ---
     # Loading or unloading kernel modules is a common technique for rootkits.
