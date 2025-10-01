@@ -60,6 +60,7 @@ vim imperm-install.sh
 The purpose of Stage 2 is to install a fully configured NixOS system with impermanence and full disk encryption enabled. Stage 2 is intended to be the penultimate step prior to Stage 3's installation of Lanzaboote and TPM-based LUKS unlocking.
 
 Some important points to note:
+- The way these instructions currently operate, you will have to rerun `imperm-STAGE2.sh` after completing Stage 2. The logic will have to be refactored to fix this. Sorry :)
 - `flake.nix` has a custom `flakeSettings` output allowing for population of `username`, `hostname`, and `email` fields throughout this config. They are currently set to sample values. 
 	- **PRIOR TO EXECUTING `sudo nixos-rebuild switch --flake`, `flake.nix` AND `imperm-STAGE2.sh` MUST BE MODIFIED TO ENSURE THEIR HOSTNAMES ARE MATCHING** -- otherwise the rebuild will fail.
 - **THE INITIAL USER PASSWORD IS `asd`!** 
