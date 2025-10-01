@@ -19,6 +19,15 @@
           mapleader = ";";
         };
 
+        mini = {
+          indentscope = {
+            enable = true;
+            setupOpts = {
+              symbol = "|";
+            };
+          };
+        };
+
         languages = {
           enableFormat = true;
           enableTreesitter = true;
