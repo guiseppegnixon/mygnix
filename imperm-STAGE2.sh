@@ -15,4 +15,4 @@ mv -v profile/system/system-IMPERM.nix profile/system/system.nix
 mv -v profile/system/users-IMPERM.nix profile/system/users.nix
 mv -v profile/system/hardening/hardening-IMPERM.nix profile/system/hardening/hardening.nix
 
-sudo nixos-rebuild switch --flake .#nixos
+echo "\n SET USER PASSWORD AND REBUILD :)"

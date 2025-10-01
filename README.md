@@ -32,6 +32,17 @@ sudo su -
 ip link a
 ip link set wlp2s0 up
 systemctl start wpa_supplicant.service
+wpa_cli
+
+> scan
+> scan_results
+> add_network
+> set_network 0 ssid "SSID"
+> set_network 0 psk "PASSWORD"
+> set_network 0 key_mgmt WPA-PSK
+> enable_network 0 
+
+ping example.com
 ```
 
 2. Download Stage 1 install script and ensure correct `DISK` value:
@@ -50,12 +61,13 @@ The purpose of Stage 2 is to install a fully configured NixOS system with imperm
 
 Some important points to note:
 - `flake.nix` has a custom `flakeSettings` output allowing for population of `username`, `hostname`, and `email` fields throughout this config. They are currently set to sample values. 
-	- **PRIOR TO EXECUTING `imperm-STAGE2.sh`, `flake.nix` AND `imperm-STAGE2.sh` MUST BE MODIFIED TO ENSURE THEIR HOSTNAMES ARE MATCHING** -- otherwise the final `sudo nixos-rebuild switch` of the script will fail.
+	- **PRIOR TO EXECUTING `sudo nixos-rebuild switch --flake`, `flake.nix` AND `imperm-STAGE2.sh` MUST BE MODIFIED TO ENSURE THEIR HOSTNAMES ARE MATCHING** -- otherwise the rebuild will fail.
 - **THE INITIAL USER PASSWORD IS `asd`!** 
 - user passwords are currently set via the `hashedPassword` attribute in `profile/system/users.nix`, whose value can be populated with the following command:
 ```sh
 mkpasswd -m sha-512
 ```
+- `users.users.${flakeSettings}.password` can be used during setup since it may be tedious or impractical to set a hash without readily availble terminal multiplexing and copy/paste.
 
 0. Connect to internet/wifi if needed:
 ```sh
@@ -69,10 +81,12 @@ sudo nmcli --ask dev wifi connect "SSID"
 curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/imperm-STAGE2.sh
 chmod +x imperm-STAGE2.sh
 ./imperm-STAGE2.sh
+
+sudo nixos-rebuild switch --flake .#[HOSTNAME]
 ```
 - This is a large build, and there's a chance for a non-zero exit code following the scripts final `sudo nixos-rebuild switch` command. My informal testing has shown this will typically resolve by a `cd ~/.nixfiles; sudo nixos-rebuild switch --flake #.[HOSTNAME]`, where `HOSTNAME` reflects what was entered in `flake.nix`. 
 
-2. Verify proper code execution and reboot. The system should boot into a KDE desktop with autologin enabled for the given user.
+2. Verify proper code execution and reboot. The system should boot into a KDE desktop with your configured user present.
 
 #### Stage 3
 The purpose of Stage 3 is to install Lanzaboote and enable TPM-based unlocking of LUKS. This section is based almost exclusively off of sources (2) and (5) above. 
