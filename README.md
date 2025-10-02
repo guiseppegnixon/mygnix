@@ -84,6 +84,11 @@ chmod +x imperm-STAGE2.sh
 ./imperm-STAGE2.sh
 
 sudo nixos-rebuild switch --flake .#[HOSTNAME]
+sudo reboot
+
+curl https://raw.githubusercontent.com/guiseppegnixon/mygnix/refs/heads/main/imperm-STAGE2.sh
+chmod +x imperm-STAGE2
+./imperm-STAGE2.sh
 ```
 - This is a large build, and there's a chance for a non-zero exit code following the scripts final `sudo nixos-rebuild switch` command. My informal testing has shown this will typically resolve by a `cd ~/.nixfiles; sudo nixos-rebuild switch --flake #.[HOSTNAME]`, where `HOSTNAME` reflects what was entered in `flake.nix`. 
 

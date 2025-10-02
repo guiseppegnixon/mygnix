@@ -18,9 +18,9 @@ let
     # '';
 
     text = let
-      luksDevice01 = "NIXROOT";
+      luksDevice01 = "/dev/sda2";
     in ''
-      sudo systemd-cryptenroll --wipe-slot=tpm2 --tpm2-device=auto --tpm2-pcrs=0+7 /dev/disk/by-label/${luksDevice01}
+      sudo systemd-cryptenroll --wipe-slot=tpm2 --tpm2-device=auto --tpm2-pcrs=0+7 ${luksDevice01}
     '';
   };
 in
@@ -31,6 +31,7 @@ in
     pkgs.sbctl
     # Needed to use the TPM2 chip with `systemd-cryptenroll`
     pkgs.tpm2-tss
+    pkgs.tpm2-tools
   ];
 
   # Lanzaboote currently replaces the systemd-boot module.
@@ -38,6 +39,7 @@ in
   # generated at installation time. So we force it to false
   # for now.
   boot.loader.systemd-boot.enable = lib.mkForce false;
+  boot.initrd.systemd.enable = true;
 
   boot.lanzaboote = {
     enable = true;
